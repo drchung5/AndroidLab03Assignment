@@ -28,6 +28,7 @@ interface  MovieService {
                 movieService = Retrofit.Builder()
                     .baseUrl(BASE_URL)
                     .addConverterFactory(GsonConverterFactory.create())
+                    .client(okHttpClient)
                     .build()
                     .create(MovieService::class.java)
             }
